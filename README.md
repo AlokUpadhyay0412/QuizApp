@@ -1,4 +1,4 @@
-# QuizApp
+
 # QuizApp
 
 ## Project Overview
