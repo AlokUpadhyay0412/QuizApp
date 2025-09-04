@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import QuizPage from "./pages/QuizPage";
+import QuizPage from "/pages/QuizPage";
 import ResultsPage from "./pages/ResultsPage";
 import "./index.css";
 
