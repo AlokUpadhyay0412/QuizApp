@@ -1,29 +1,29 @@
-/* Import Google Font */
+/* Import Google Font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 /* Global Styles */
 html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden; /* Prevent scrolling */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  height: 100%; /* Take full height of viewport */
+  overflow: hidden; /* Prevent scrolling on most pages */
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  background: url("/public/images/bg.jpg") no-repeat center center/cover;
-  color: #fff;
+  font-family: "Roboto", sans-serif; /* Set font */
+  background: url("/public/images/bg.jpg") no-repeat center center/cover; /* Background image */
+  color: #fff; /* Default text color */
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Center content vertically & horizontally */
 }
 
-/* Container */
+/* Container for all content */
 .container {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.75); /* Semi-transparent black */
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Soft shadow */
   padding: 30px;
   max-width: 800px;
   width: 90%;
@@ -31,21 +31,26 @@ body {
 }
 
 /* Headings */
-h1, h2 {
+h1 {
   margin-bottom: 20px;
   font-weight: bold;
-  color: #8dbd59;
+  color: #8dbd59; /* Greenish color for headings */
+}
+h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #000000; /* Greenish color for headings */
 }
 
-/* Question */
+/* Question Text */
 .question {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
 
-/* Options */
+/* List of Options */
 .options {
-  list-style: none;
+  list-style: none; /* Remove bullets */
   padding: 0;
 }
 
@@ -55,13 +60,13 @@ h1, h2 {
   padding: 12px 16px;
   margin-bottom: 10px;
   border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth hover effect */
 }
 
 .options li:hover {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #ffdd57;
+  border-color: #ffdd57; /* Highlight border on hover */
 }
 
 /* Next Question Button */
@@ -77,7 +82,7 @@ button.next-btn {
   color: #000;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease; /* Button hover effect */
 }
 
 button.next-btn:hover {
@@ -116,9 +121,9 @@ button:hover {
 
 .progress-bar {
   height: 8px;
-  background: #ffdd57;
+  background: #ffdd57; /* Yellow progress */
   border-radius: 4px;
-  width: 0%;
+  width: 0%; /* Will be updated dynamically */
   transition: width 0.3s ease;
 }
 
@@ -127,13 +132,12 @@ button:hover {
   list-style: none;
   padding: 0;
 
-  /* Make it scrollable */
-  max-height: 60vh;  /* Adjust as needed */
-  overflow-y: auto;
+  max-height: 60vh;  /* Scrollable area */
+  overflow-y: auto; /* Vertical scroll */
   margin: 20px 0;
 }
 
-/* Optional: custom scrollbar */
+/* Optional custom scrollbar for results */
 .results-list::-webkit-scrollbar {
   width: 8px;
 }
@@ -174,7 +178,7 @@ button:hover {
   gap: 8px;
 }
 
-/* Correct Answer */
+/* Correct Answer Styling */
 .options-list li.correct {
   background-color: rgba(0, 255, 0, 0.15);
   border-color: limegreen;
@@ -187,7 +191,7 @@ button:hover {
   font-weight: bold;
 }
 
-/* Wrong Answer */
+/* Wrong Answer Styling */
 .options-list li.wrong {
   background-color: rgba(255, 0, 0, 0.15);
   border-color: red;
@@ -200,15 +204,15 @@ button:hover {
   font-weight: bold;
 }
 
-/* Responsive Design */
+/* Responsive Design for small screens */
 @media (max-width: 600px) {
   html, body {
-    overflow-y: auto;
+    overflow-y: auto; /* Allow scrolling on mobile */
   }
   .container {
     padding: 20px;
   }
   .question {
-    font-size: 1rem;
+    font-size: 1rem; /* Smaller text on mobile */
   }
 }
