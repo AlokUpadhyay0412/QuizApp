@@ -1,0 +1,214 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: url("/public/images/bg.jpg") no-repeat center center/cover;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+}
+
+/* Headings */
+h1, h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #8dbd59;
+}
+
+/* Question */
+.question {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Options */
+.options {
+  list-style: none;
+  padding: 0;
+}
+
+.options li {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.options li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffdd57;
+}
+
+/* Next Question Button */
+button.next-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button.next-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Other Buttons (Start, Submit, Restart) */
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background: linear-gradient(45deg, #ff6b6b, #ffdd57);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Progress Bar */
+.progress {
+  height: 8px;
+  background: #333;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #ffdd57;
+  border-radius: 4px;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* Results Container - Scrollable */
+.results-list {
+  list-style: none;
+  padding: 0;
+
+  /* Make it scrollable */
+  max-height: 60vh;  /* Adjust as needed */
+  overflow-y: auto;
+  margin: 20px 0;
+}
+
+/* Optional: custom scrollbar */
+.results-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.results-list::-webkit-scrollbar-thumb {
+  background: #ffdd57;
+  border-radius: 4px;
+}
+
+/* Each Question Review Block */
+.result-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.result-item h4 {
+  margin-bottom: 8px;
+  color: #ffdd57;
+}
+
+/* Review Mode Options */
+.options-list {
+  list-style: none;
+  padding: 0;
+}
+
+.options-list li {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Correct Answer */
+.options-list li.correct {
+  background-color: rgba(0, 255, 0, 0.15);
+  border-color: limegreen;
+  color: #00ff88;
+}
+
+.options-list li.correct::before {
+  content: "✔";
+  color: limegreen;
+  font-weight: bold;
+}
+
+/* Wrong Answer */
+.options-list li.wrong {
+  background-color: rgba(255, 0, 0, 0.15);
+  border-color: red;
+  color: #ff6b6b;
+}
+
+.options-list li.wrong::before {
+  content: "✘";
+  color: red;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  html, body {
+    overflow-y: auto;
+  }
+  .container {
+    padding: 20px;
+  }
+  .question {
+    font-size: 1rem;
+  }
+}
